@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5f7fb">
+    <meta name="description" content="Juega piedra, papel o tijera contra la computadora.">
+    <title>Piedra, papel o tijera</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="game">
+      <header class="game__header">
+        <p class="eyebrow">Un clásico para cualquier momento</p>
+        <h1>Piedra, papel o tijera</h1>
+        <p class="game__intro">Elige tu jugada y descubre quién gana la ronda.</p>
+      </header>
+
+      <section class="panel" aria-labelledby="round-title">
+        <h2 id="round-title">Elige tu jugada</h2>
+        <div class="choices" aria-label="Opciones de juego">
+          <button class="choice" type="button" data-choice="piedra" aria-keyshortcuts="1">
+            <span class="choice__emoji" aria-hidden="true">✊</span>
+            <span>Piedra</span>
+            <kbd>1</kbd>
+          </button>
+          <button class="choice" type="button" data-choice="papel" aria-keyshortcuts="2">
+            <span class="choice__emoji" aria-hidden="true">✋</span>
+            <span>Papel</span>
+            <kbd>2</kbd>
+          </button>
+          <button class="choice" type="button" data-choice="tijera" aria-keyshortcuts="3">
+            <span class="choice__emoji" aria-hidden="true">✌️</span>
+            <span>Tijera</span>
+            <kbd>3</kbd>
+          </button>
+        </div>
+        <p class="keyboard-hint">También puedes usar las teclas 1, 2 y 3.</p>
+      </section>
+
+      <section class="panel round" aria-labelledby="round-result-title">
+        <h2 id="round-result-title">Esta ronda</h2>
+        <div class="matchup" aria-live="polite" aria-atomic="true">
+          <p><span class="matchup__label">Tú</span><span id="player-choice" class="matchup__choice">—</span></p>
+          <span class="matchup__divider" aria-hidden="true">vs.</span>
+          <p><span class="matchup__label">Computadora</span><span id="computer-choice" class="matchup__choice">—</span></p>
+        </div>
+        <p id="result" class="result" role="status" aria-live="polite">¡Haz tu primera jugada!</p>
+      </section>
+
+      <section class="panel scoreboard" aria-labelledby="score-title">
+        <div class="scoreboard__heading">
+          <div>
+            <p class="eyebrow">Partida al mejor de 5</p>
+            <h2 id="score-title">Marcador</h2>
+          </div>
+          <p id="match-status" class="match-status" role="status">Primero en llegar a 3 gana</p>
+        </div>
+        <div class="scores" aria-live="polite" aria-atomic="true">
+          <p><span>Tú</span><strong id="player-score">0</strong></p>
+          <span class="scores__divider" aria-hidden="true">:</span>
+          <p><span>Computadora</span><strong id="computer-score">0</strong></p>
+        </div>
+        <button id="reset" class="reset-button" type="button">Reiniciar partida</button>
+      </section>
+
+      <p class="game__footer">Piedra vence a tijera · Tijera vence a papel · Papel vence a piedra</p>
+    </main>
+  </body>
+</html>
