@@ -6,6 +6,8 @@ Un juego de piedra, papel o tijera contra la computadora, hecho con HTML, CSS y 
 
 [Jugar en GitHub Pages](https://leidy0001.github.io/Piedra-Papel-Tijera/)
 
+> **Publicación pendiente:** GitHub Pages aún no está activado para este repositorio. En **Settings → Pages**, selecciona **Deploy from a branch**, la rama **main** y la carpeta **/(root)**. Después de publicar, puedes copiar la URL de la demo al campo **Website** de **About**.
+
 ## Cómo jugar
 
 Elige **Piedra**, **Papel** o **Tijera** con los botones, o usa las teclas **1**, **2** y **3**. Piedra vence a tijera, tijera vence a papel y papel vence a piedra. Si ambos eligen lo mismo, la ronda termina en empate.
